@@ -31,3 +31,10 @@ def morse_encoder(got):
 print(morse_encoder("hey jude"))
 print(morse_encoder("This is cool- You are awesome"))
 print("printing email id: \n", morse_encoder("abc@gmail.com"))
+
+Sample Output:
+    "hey jude": .... . -.--    .--- ..- -.. . 
+    "This is cool- You are awesome": - .... .. ...    .. ...    -.-. --- --- .-.. -....-    -.-- --- ..-    .- .-. .    .- .-- . ... --- -- . 
+    "abc@gmail.com": 
+        printing email id: 
+        .- -... -.-. .--.-. --. -- .- .. .-.. .-.-.- -.-. --- -- 
