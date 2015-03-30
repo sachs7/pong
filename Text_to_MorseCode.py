@@ -1,3 +1,8 @@
+"""
+This code will take any sentence and convert it into Morse Code.
+Note: Not all characters are supported. Other characters can be added by updating the dictionary table, "morse_table".
+"""
+
 morse_table = {
     "A": ".-", "B": "-...", "C": "-.-.", "D": "-..",
     "E": ".", "F": "..-.", "G": "--.", "H": "....",
