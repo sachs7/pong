@@ -18,17 +18,12 @@ morse_table = {
 def decode_morse(morseCode):
     result = []
     lis1 = morseCode.split("   ")
-    # print("after split at 3 spaces", lis1)
     for i in range(len(lis1)):
-        # print("print list after 3 spaces",lis1[i])
-        # if " " in lis1[i]:
         b = lis1[i].split()
-        # print("if there is 1 space",b)
         for j in b:
             result.append(morse_table[j])
         result.append(" ")
 
-    # return "".join(result)
     res = "".join(result)
     r = res.rstrip()
     fin = r.lstrip()
