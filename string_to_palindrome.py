@@ -13,11 +13,8 @@ def s2p(text):
 
     elif lis[0] != lis[-1]:
         lis.append(lis[0])
-        print(lis)
 
     for i in range(1, len(lis) - 1):
-        print(lis[i])
-        print(lis[-(i + 1)])
 
         if lis[i] == lis[-(i + 1)]:
             continue
@@ -39,7 +36,6 @@ Sample Output:
     ['t', 'e', 's', 'e', 't']
     ('Given string was: ', 'test', ' And number of insertions took was: ', 1)
   
-    ['P', 'y', 't', 'h', 'o', 'n', 'P']
     ['P', 'y', 't', 'h', 'o', 'n', 'y', 'P']
     ['P', 'y', 't', 'h', 'o', 'n', 't', 'y', 'P']
     ['P', 'y', 't', 'h', 'o', 'n', 'h', 't', 'y', 'P']
