@@ -29,8 +29,11 @@ def s2p(text):
         return "It is not"
 
 
-print(s2p("test"))
-print(s2p("python"))
+# print(s2p("test"))
+# print(s2p("python"))
+
+inp = str(input("Enter the string: "))
+print(s2p(inp))
 
 Sample Output:
     ['t', 'e', 's', 'e', 't']
@@ -41,3 +44,9 @@ Sample Output:
     ['P', 'y', 't', 'h', 'o', 'n', 'h', 't', 'y', 'P']
     ['P', 'y', 't', 'h', 'o', 'n', 'o', 'h', 't', 'y', 'P']
     ('Given string was: ', 'Python', ' And number of insertions took was: ', 4)
+
+    Enter the string: 12345
+    ['1', '2', '3', '4', '5', '2', '1']
+    ['1', '2', '3', '4', '5', '3', '2', '1']
+    ['1', '2', '3', '4', '5', '4', '3', '2', '1']
+    ('Given string was: ', '12345', ' And number of insertions took was: ', 3)
