@@ -36,8 +36,12 @@ print(s2p("test"))
 print(s2p("python"))
 
 Sample Output:
-  ['t', 'e', 's', 'e', 't']
-  ('Given string was: ', 'test', ' And number of insertions took was: ', 1)
+    ['t', 'e', 's', 'e', 't']
+    ('Given string was: ', 'test', ' And number of insertions took was: ', 1)
   
-  ['P', 'y', 't', 'h', 'o', 'n', 'o', 'h', 't', 'y', 'P']
-  ('Given string was: ', 'Python', ' And number of insertions took was: ', 4)
+    ['P', 'y', 't', 'h', 'o', 'n', 'P']
+    ['P', 'y', 't', 'h', 'o', 'n', 'y', 'P']
+    ['P', 'y', 't', 'h', 'o', 'n', 't', 'y', 'P']
+    ['P', 'y', 't', 'h', 'o', 'n', 'h', 't', 'y', 'P']
+    ['P', 'y', 't', 'h', 'o', 'n', 'o', 'h', 't', 'y', 'P']
+    ('Given string was: ', 'Python', ' And number of insertions took was: ', 4)
