@@ -50,3 +50,6 @@ Sample Output:
     ['1', '2', '3', '4', '5', '3', '2', '1']
     ['1', '2', '3', '4', '5', '4', '3', '2', '1']
     ('Given string was: ', '12345', ' And number of insertions took was: ', 3)
+    
+    Enter the string: aba
+    It is palindrome, No insertion was done.
