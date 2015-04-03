@@ -16,7 +16,7 @@ Example:
 Consider the sequence: 2, 0, 6, 3, 1, 6, 3, 1, 6, 3, 1, .... 
 The cycle in this value sequence is 6, 3, 1. 'mu' is 2 (first 6) ? is 3 (length of the sequence or difference between position of consecutive 6)
 
-The goal of this kata is to build a function that will return ['mu',?] when given a short sequence. 
+The goal of here is to build a function that will return ['mu',?] when given a short sequence. 
 Simple loops will be sufficient. The sequence will be given in the form of an array. 
 All array will be valid sequence associated with deterministic function. 
 It means that the sequence will repeat itself when a value is reached a second time. 
