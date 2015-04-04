@@ -17,6 +17,8 @@ def trail_zero(n):
 
 print(trail_zero(1000))	
 
+Sample Output:
+	249 (1000! gives 249 trailing zeros)
 
 ******** Method 2: More efficient than the above ********
 ******** Please go through readme link to understand below code ********
