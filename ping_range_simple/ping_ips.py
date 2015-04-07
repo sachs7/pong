@@ -10,6 +10,7 @@ pattern2 = re.compile(b"timed out")
 ip_pattern = re.compile(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$")
 
 def ip_status(ip, rnge):
+	
 	""" List to hold active IP addresses """
 	active = []
 	down = []
@@ -21,6 +22,9 @@ def ip_status(ip, rnge):
 	
 	""" Get the last field of IP """
 	lst_field = ip.split(".")[3]
+	
+	if rnge == "0" or rnge == "":
+		rnge = 1
 	
 	if 0 <= int(rnge) <= 255 and ip_pattern.match(ip):
 		""" Calculate the actual range """
@@ -41,7 +45,7 @@ def ip_status(ip, rnge):
 			else:
 				active.append(ip_fin)
 	
-		result = "Active IP addresses are: " + str(active) + "\n\n" + "Unreachable IP: " + str(down) + "\n\n" + "Timed out IP's: " + str(timed_out)
+		result = "\nActive IP addresses are: " + str(active) + "\n\n" + "Unreachable IP: " + str(down) + "\n\n" + "Timed out IP's: " + str(timed_out)
 		return result
 	
 	else:
