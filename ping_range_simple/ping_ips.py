@@ -56,3 +56,19 @@ ip = input("Enter the IP address eg., 10.0.0.1:   ")
 rnge = input("Enter the range of IP's: ")
 
 print(ip_status(ip, rnge))
+
+Sample Output:
+	Enter the IP address eg., 10.0.0.1:   10.0.0.7
+	Enter the range of IP's: 5
+
+	Active IP addresses are: ['10.0.0.10']
+
+	Unreachable IP: ['10.0.0.7', '10.0.0.8', '10.0.0.9', '10.0.0.11']
+
+	Timed out IP's: []
+	
+	
+	Enter the IP address eg., 10.0.0.1:   10.0.d.c
+	Enter the range of IP's: 895
+	1) Range should be in between 0 and 255 inclusive. 
+	2) Check the IP format.
