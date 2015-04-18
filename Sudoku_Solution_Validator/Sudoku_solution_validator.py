@@ -60,50 +60,49 @@ def validSolution(board):
 		tbyt = [ board[i][j] for j in range(3,6) for i in range(6,9) ]# mid bottom 3x3 matrix
 		return result(tbyt)
 
-#-------------------------------------			
+	""" Function to check the repeating pattern of 3x3 matrix """			
 	def result(test):
 		if  str(test).count('1') and str(test).count('2') and str(test).count('3') and str(test).count('4') and str(test).count('5') and str(test).count('6') and str(test).count('7') and str(test).count('8') and str(test).count('9') < 2:
 			return True
 		else:
 			return False	
-#-------------------------------------			
 	
+	""" Function to check repeating pattern of numbers for all the ROWS """
 	def ro(board):
 		rs = []
 		for i in range(9):
-			#print(board[i])
-		#rw = [board[i] for i range(9)]
 			rw = str(board[i])
-			#print(rw)
+		
 			if str(rw).count(str(1)) and str(rw).count(str(2)) and str(rw).count(str(3)) and str(rw).count(str(4)) and str(rw).count(str(5)) and str(rw).count(str(6)) and str(rw).count(str(7)) and str(rw).count(str(8)) and str(rw).count(str(9)) < 2:
 				rs.append(True)
 			else:
 				rs.append(False)
-		print("rows", rs)
+		# print("rows", rs)
 		if False in rs:
 			return False
 		else:
 			return True
 	
+	""" To count repeating pattern of numbers in COLUMNS """
 	
-	
-	# To count repeating pattern of numbers in COLUMNS 
 	def co(board):
 		colu = []
 		test = [ [board[j][i] for j in range(9)] for i in range(9)]
 		for i in range(9):
 			col = str(test[i])
-			print(col)
+			
 			if col.count(str(1)) and col.count(str(2)) and col.count(str(3)) and col.count(str(4)) and col.count(str(5)) and col.count(str(6)) and col.count(str(7)) and col.count(str(8)) and col.count(str(9)) < 2:
 				colu.append(True)
 			else:
 				colu.append(False)
-		print("cols", colu)
+		# print("cols", colu)
 		if False in colu:
 			return False
 		else:
 			return True
-		
+	
+	""" If the result from all the above functions is True then result is True else False """	
+	
 	if co(board) and ro(board) and midbottom_tbyt(board) and midright_tbyt(board) and topright_tbyt(board) and midtop_tbyt(board) and midleft_tbyt(board) and bleft_tbyt(board) and bright_tbyt(board) and center_tbyt(board) and first_tbyt(board) == True:
 		return True
 	else:
