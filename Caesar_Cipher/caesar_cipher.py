@@ -48,7 +48,7 @@ def caesar(string, shiftkey):
 	return res
 	
 msg = input("Enter message: ")
-shift_amt = int(input("By what amount you want to shift? Keep between [-25 to 25]: "))
+shift_amt = int(input("By what amount you want to shift?: "))
 
 print(caesar(msg, shift_amt))
 
@@ -56,5 +56,9 @@ print(caesar(msg, shift_amt))
 Sample Output:
 	
 	Enter message: Awesome! I can send cipher messages now!...;)
-	By what amount you want to shift? Keep between [-25 to 25]: -8
+	By what amount you want to shift?: -8
 	Sowkgew! A usf kwfv uahzwj ewkksywk fgo!...;)
+	
+	Enter message: www.google.com
+	By what amount you want to shift?: 87
+	fff.pxxpun.lxv
