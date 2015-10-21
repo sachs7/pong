@@ -2,6 +2,9 @@ g_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
 
 def caesar(string, shiftkey):
 	
+	""" If shiftkey is greater than 26 """
+	shiftkey = shiftkey if 26 > shiftkey else shiftkey % 26
+	
 	""" Shift 'g_list' by 'shiftkey' places """
 	b_list = g_list[shiftkey:] + g_list[:shiftkey]
 	
