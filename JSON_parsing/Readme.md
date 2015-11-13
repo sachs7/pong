@@ -28,3 +28,6 @@ Retrieving http://pr4e.dr-chuck.com/tsugi/mod/python-data/data/comments_42.json
 Retrieved 2739 characters
 Count: 50
 Sum: 2553
+
+
+Source: Coursera
