@@ -24,16 +24,16 @@ Output Format
 
 Output one integer on a single line: The sum of all the points scored.
 
-Sample Input
+Sample Input [without "\n"]
 
-5 6 
-10 8 6 4 2 
-0 0 
-1 1 
-2 2 
-3 3 
-4 4 
-5 5 
+5 6 \n
+10 8 6 4 2 \n
+0 0 \n
+1 1 \n
+2 2 \n
+3 3 \n
+4 4 \n
+5 5 \n
 
 Sample Output
 
