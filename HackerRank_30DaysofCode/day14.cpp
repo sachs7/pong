@@ -18,13 +18,11 @@ class Difference {
         elements = e;
     }
 
-    int computeDifference() {
+    void computeDifference() {
         auto min_value = min_element(elements.begin(), elements.end());
         auto max_value = max_element(elements.begin(), elements.end());
 
         maximumDifference = (*max_value) - (*min_value);
-        
-        return maximumDifference;
     }
     
     }; // End of Difference class
