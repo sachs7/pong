@@ -25,8 +25,8 @@ class RubyApp < Gtk::Window
     
     def init_ui
 	  begin	
-        fixed = Gtk::Fixed.new
-        add fixed
+        	fixed = Gtk::Fixed.new
+        	add fixed
 		
 		header = Gtk::Label.new "Welcome to Ruby File upload GUI."
 		fixed.put header, 10, 10
@@ -56,38 +56,38 @@ class RubyApp < Gtk::Window
 		end
 		
 		label = Gtk::Label.new "URL"
-        fixed.put label, 10, 60
+        	fixed.put label, 10, 60
 		
 		urlentry = Gtk::Entry.new
-        fixed.put urlentry, 60, 60
+        	fixed.put urlentry, 60, 60
 		
 		urlentry.signal_connect "key-release-event" do |s, ev|
 			url_key_release s, ev
 		end
 		
 		entry = Gtk::Entry.new
-        fixed.put entry, 60, 120
+        	fixed.put entry, 60, 120
 
-        entry.signal_connect "key-release-event" do |w, e|
+        	entry.signal_connect "key-release-event" do |w, e|
 			on_key_release w, e
-        end
+        	end
 		
 		entry1 = Gtk::Entry.new
-        fixed.put entry1, 60, 170
+        	fixed.put entry1, 60, 170
 
-        entry1.signal_connect "key-release-event" do |w1, e1|
+        	entry1.signal_connect "key-release-event" do |w1, e1|
 			on_key_release1 w1, e1
-        end
+        	end
 		
 		entry2 = Gtk::Entry.new
-        fixed.put entry2, 60, 220
+        	fixed.put entry2, 60, 220
 
-        entry2.signal_connect "key-release-event" do |w2, e2|
+        	entry2.signal_connect "key-release-event" do |w2, e2|
 			on_key_release2 w2, e2
-        end
+        	end
 		
 		button = Gtk::Button.new :label => "Upload"   
-        button.signal_connect "clicked" do 
+        	button.signal_connect "clicked" do 
 		if @chk
 			transfer(@url, @snd)
 		else
@@ -97,7 +97,7 @@ class RubyApp < Gtk::Window
 		end
 		
 		button1 = Gtk::Button.new :label => "Upload"   
-        button1.signal_connect "clicked" do 
+        	button1.signal_connect "clicked" do 
 		if @chk
 			transfer(@url, @snd1)
 		else
@@ -106,23 +106,23 @@ class RubyApp < Gtk::Window
 			msg(@url)
 		end
 
-        button2 = Gtk::Button.new :label => "Upload"   
-        button2.signal_connect "clicked" do 
-		if @chk
-			transfer(@url, @snd2)
-		else
-			on_error_login
-		end
+        	button2 = Gtk::Button.new :label => "Upload"   
+        	button2.signal_connect "clicked" do 
+			if @chk
+				transfer(@url, @snd2)
+			else
+				on_error_login
+			end
 			msg(@url)
 		end
 		
 		button3 = Gtk::Button.new :label => "Login"   
-        button3.signal_connect "clicked" do 
+        	button3.signal_connect "clicked" do 
 			login(@usernme, @passuser)
 		end
 		
 		button4 = Gtk::Button.new :label => "Sign Up"   
-        button4.signal_connect "clicked" do 
+        	button4.signal_connect "clicked" do 
 			signup(@usernme, @passuser)
 		end
 		
@@ -147,11 +147,11 @@ class RubyApp < Gtk::Window
 		fixed.put download_header, 10, 350
 		
 		download_text = Gtk::Entry.new
-        fixed.put download_text, 60, 370
+        	fixed.put download_text, 60, 370
 
-        download_text.signal_connect "key-release-event" do |w3, e3|
+        	download_text.signal_connect "key-release-event" do |w3, e3|
 			on_download_pressed w3, e3
-        end
+        	end
 		
 		button6 = Gtk::Button.new :label => "Download"
 		button6.signal_connect "clicked" do
@@ -163,16 +163,16 @@ class RubyApp < Gtk::Window
 			msg(@url)
 		end
 
-        fixed.put button, 240, 120
+        	fixed.put button, 240, 120
 		fixed.put button1, 240, 170
 		fixed.put button2, 240, 220
-        fixed.put button3, 685, 180
+        	fixed.put button3, 685, 180
 		fixed.put button4, 600, 180
 		fixed.put button5, 240, 300
 		fixed.put button6, 240, 370
 		
 		set_title "Ruby Client"
-        @tes = signal_connect "destroy" do 
+        	@tes = signal_connect "destroy" do 
 			Gtk.main_quit 
 			if @tes
 				#summary
@@ -180,9 +180,9 @@ class RubyApp < Gtk::Window
 			end	
 		end  
 		
-        set_default_size 800, 415
-        set_window_position(:center)
-        show_all
+        	set_default_size 800, 415
+        	set_window_position(:center)
+        	show_all
 	  rescue e
 		puts "Sorry, you are not allowed to do this!"
 	  end
@@ -205,7 +205,7 @@ class RubyApp < Gtk::Window
 	# Value of entry box 1
 	def on_key_release sender, event
 		@snd = sender.text
-    end
+    	end
 	
 	# Value of entry box 2
 	def on_key_release1 sender1, event1
@@ -224,22 +224,22 @@ class RubyApp < Gtk::Window
 	
 #***************************************************************************************************************
 	def transfer ul, content
-        begin 
+        	begin 
 			request = Typhoeus::Request.new("http://ignite-now.us", followlocation: true)
 
 			request.on_complete do |response|
-			if response.success? or !testing
-				puts " hell yeah"
-				on_info
-			elsif response.code == 0
-				puts " Could not get an http response, something's wrong."
-				puts "#{response.return_message}"
-				on_error
-			else
-		#    # Received a non-successful http response.
-				puts "HTTP request failed: \" + \" #{response.code.to_s}"
-				on_error
-			end
+				if response.success? or !testing
+					puts " hell yeah"
+					on_info
+				elsif response.code == 0
+					puts " Could not get an http response, something's wrong."
+					puts "#{response.return_message}"
+					on_error
+				else
+					#    # Received a non-successful http response.
+					puts "HTTP request failed: \" + \" #{response.code.to_s}"
+					on_error
+				end
 			end
 			request.run
 			testing = Typhoeus.post(
@@ -301,12 +301,12 @@ class RubyApp < Gtk::Window
     end
 	puts "^^^^^^^^^^^^^^^^^#{@success}^^^^^^^^^^^^^^^"
 	def on_error
-       md = Gtk::MessageDialog.new :parent => self, 
-           :flags => :destroy_with_parent, :type => :info, 
-           :buttons_type => :OK, :message => "Something went Wrong! Failed to upload. Verify again!"
-       @fail = md.run
-       md.destroy
-    end
+       		md = Gtk::MessageDialog.new :parent => self, 
+           	:flags => :destroy_with_parent, :type => :info, 
+           	:buttons_type => :OK, :message => "Something went Wrong! Failed to upload. Verify again!"
+       		@fail = md.run
+       		md.destroy
+    	end
 	puts "^^^^^^^^^^^^^^^^^#{@fail}^^^^^^^^^^^^^^^"
 
 	def showcase
@@ -315,7 +315,7 @@ class RubyApp < Gtk::Window
 		:buttons_type => :OK, :message => "#{@statement}"
 		md.run
 		md.destroy
-    end
+    	end
 	
 	def login uname, pname
 		url = "http://ignite-now.us/queryDB.php"
@@ -368,34 +368,34 @@ class RubyApp < Gtk::Window
 	
 	def on_login
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "Welcome!"
-        md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "Welcome!"
+        	md.run
+        	md.destroy
 	end
 	
 	def on_error_login
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "You are not a valid user. Sign up now!"
-        md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "You are not a valid user. Sign up now!"
+        	md.run
+        	md.destroy
 	end
 	
 	def user_added
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "Added! Try logging in again..."
-        md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "Added! Try logging in again..."
+        	md.run
+        	md.destroy
 	end
 	
 	def already_exists
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "Sorry! User already exists..."
-        md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "Sorry! User already exists..."
+        	md.run
+        	md.destroy
 	end
 		
 	def view_files
@@ -436,7 +436,7 @@ class RubyApp < Gtk::Window
 			to Download the files."
 		md.run
 		md.destroy
-    end
+    	end
 		
 	def download_server_files(file_name)
 		begin
@@ -461,18 +461,18 @@ class RubyApp < Gtk::Window
 	
 	def file_success_download
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "Successfully downloaded the file."
-        @success_download = md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "Successfully downloaded the file."
+        	@success_download = md.run
+        	md.destroy
 	end
 	
 	def error_in_download
 		md = Gtk::MessageDialog.new :parent => self, 
-        :flags => :destroy_with_parent, :type => :info, 
-        :buttons_type => :OK, :message => "Sorry! error in file download..."
-        @fail_download = md.run
-        md.destroy
+        	:flags => :destroy_with_parent, :type => :info, 
+        	:buttons_type => :OK, :message => "Sorry! error in file download..."
+        	@fail_download = md.run
+        	md.destroy
 	end
 end
 
