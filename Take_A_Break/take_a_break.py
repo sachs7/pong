@@ -11,7 +11,9 @@ playlist = ["https://www.youtube.com/watch?v=D2AnoBH5xYM",
 
 print("This program started at: ", time.ctime())
 
-for i in range(3):
+break_times = 3
+
+for i in range(break_times):
 
 	""" Wait for 2 hours (7200 seconds) """
 	time.sleep(7200) 
@@ -19,6 +21,6 @@ for i in range(3):
 	song = random.choice(playlist)
 	indx = playlist.index(song)
 	removed = playlist.pop(indx)
-	if song not in already_played:
-		webbrowser.open(song)
-		already_played.append(removed)
+	
+	webbrowser.open(song)
+	already_played.append(removed)
