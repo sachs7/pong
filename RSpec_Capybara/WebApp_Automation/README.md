@@ -7,6 +7,8 @@ Tools used:
   4) Phantomjs, 
   5) Poltergeist
   
+Design Pattern Used: Page Object Model
+  
 Items considered for automation: 
 
   [1] Basic Auth,
