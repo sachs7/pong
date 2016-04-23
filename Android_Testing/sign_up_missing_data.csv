@@ -1,0 +1,4 @@
+first_name,last_name,email_address,password,notification_message
+,hilton,tom942@yahoo.com,badPassword,Please enter your first name.
+tommy,,tommy@hilfiger.com,SuperSecretPassword!,Please enter your last name.
+hads,alkdsjf, ,super!,This email address is invalid.
