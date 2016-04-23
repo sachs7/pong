@@ -4,7 +4,9 @@ require 'CSV'
 
 class Yelp
 
+  # 'Default application is Yelp'
   def start_session(pkg='com.yelp.android', actvty='com.yelp.android.ui.activities.RootActivity')
+    
     server_url = 'http://localhost:4723/wd/hub'
 
     capabilities =
