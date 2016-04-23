@@ -42,8 +42,6 @@ class Yelp
   end
 
   def notification_text
-    #wait = Selenium::WebDriver::Wait.new(timeout: 5)
-    #wait.until { @driver.find_element(class: 'flash').displayed? }
     @driver.find_element(:id, 'android:id/message').text
   end
 
