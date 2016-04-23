@@ -11,6 +11,6 @@ The basic features considered for testing is:
 [1] Install the app from Play Store.
 [2] Test for login/sign up with different data (CSV file).
 [3] Basic search functionality of Yelp.
-[4] Scroll to a item and search.
+[4] Scroll and search.
 
 
