@@ -1,5 +1,4 @@
 require 'rspec'
-require 'watir-webdriver'
 require 'selenium-webdriver'
 require 'appium_lib'
 require 'CSV'
