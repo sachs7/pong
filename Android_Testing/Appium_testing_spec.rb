@@ -1,7 +1,7 @@
 require 'rspec'
 require 'appium_lib'
 require 'selenium-webdriver'
-require_relative 'testing'
+require_relative 'Appium_inbuilt_functions'
 
 
 describe 'testing' do
