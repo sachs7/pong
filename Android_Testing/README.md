@@ -1,6 +1,7 @@
-In this project I have worked on the Android application testing using:
-  [1] Appium,
-  [2] Ruby,
+In this project I have worked on Android application testing using:
+
+  [1] Appium.
+  [2] Ruby.
   [3] RSpec.
 
 The application under test is 'Yelp'. I have used both Selenium webdriver and Appium's in built functions to automate the app.
