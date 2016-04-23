@@ -8,6 +8,9 @@ describe 'Yelp App Installation' do
 
   before(:each) do
     @cl_instance = Yelp.new
+    
+    # 'start_session takes two arguments, one is the appPkg name and the other is appActivity name.'
+    # 'By default the arguments to start_session is of Yelp'
     @driver = @cl_instance.start_session('com.android.vending', 'com.google.android.finsky.activities.MainActivity')
     @wait_time = @driver.manage.timeouts.implicit_wait = 60
   end
