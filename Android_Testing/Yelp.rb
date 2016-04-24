@@ -103,6 +103,16 @@ class Yelp
     find_class('android.widget.ImageButton').click
     u_name = find_by_id('com.yelp.android:id/nav_user_name').text
   end
+  
+  def login_after_install(uname, pword)
+    splash_arrows.click
+    splash_arrows.click
+    login_button.click
+    username.send_key(uname)
+    password.send_key(pword)
+    find_by_id('com.yelp.android:id/activity_login_btnLogin').click
+    find_by_id('android:id/message').text
+  end
 
 
 end
