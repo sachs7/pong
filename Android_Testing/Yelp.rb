@@ -111,7 +111,7 @@ class Yelp
     username.send_key(uname)
     password.send_key(pword)
     find_by_id('com.yelp.android:id/activity_login_btnLogin').click
-    find_by_id('android:id/message').text
+    notification_text
   end
 
 
