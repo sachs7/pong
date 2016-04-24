@@ -145,13 +145,16 @@ describe 'Yelp Login and Sign Up Automation' do
 
     it 'Should Login Successfully', login: true do
       begin
-        u_name = @cls_instance.login_success(<user email>, <user password>)
-        expect(u_name).to eq <user name>
+        u_name = @cls_instance.login_success(<Your username>, <Your password>)
+        expect(u_name).to eq <Your name>
+      rescue
+        verify_text = @cls_instance.login_after_install(<Your username>, <Your password>)
+        expect(verify_text).to eq 'Great! Now you can add reviews, upload photos, check in and bookmark your favorite businesses!'
       rescue Exception => error
         p error.message
       end
     end
-
+    
   end
 
 end
