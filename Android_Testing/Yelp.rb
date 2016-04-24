@@ -97,8 +97,8 @@ class Yelp
   def login_success(user_name, pass_word)
     find_class('android.widget.ImageButton').click
     find_by_id('com.yelp.android:id/nav_sign_up_log_in_button').click
-    find_by_id('com.yelp.android:id/activity_login_editUsername').send_key(user_name)
-    find_by_id('com.yelp.android:id/activity_login_editPassword').send_key(pass_word)
+    username.send_key(user_name)
+    password.send_key(pass_word)
     find_by_id('com.yelp.android:id/activity_login_btnLogin').click
     find_class('android.widget.ImageButton').click
     u_name = find_by_id('com.yelp.android:id/nav_user_name').text
