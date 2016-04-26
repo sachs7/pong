@@ -70,8 +70,8 @@ describe 'Yelp Login and Sign Up Automation' do
       @cls_instance.splash_arrows.click
       @cls_instance.splash_arrows.click
       @cls_instance.login_button.click
-      @cls_instance.username.send_key('up.sachi@gmail.com')
-      @cls_instance.password.send_key('HelloWorld!')
+      @cls_instance.username.send_key(<Your email>)
+      @cls_instance.password.send_key(<wrong password>)
       @cls_instance.find_by_id('com.yelp.android:id/activity_login_btnLogin').click
       begin
         if @cls_instance.notification_text == 'Wrong email or password.'
