@@ -74,6 +74,20 @@ describe 'Yelp - Basic testing' do
     end
 
   end
+  
+  context 'Reviews' do
+
+    it 'search Startbucks and write a review', write_review:true do
+      @cls_instance.find_class('android.widget.ImageButton').click
+      @cls_instance.find_name('Add Review')
+      @cls_instance.search_for('Starbucks')
+      @cls_instance.search_button
+      @app_driver.find_element(:name, 'Starbucks').click
+      expect(@app_driver.find_element(:id, 'com.yelp.android:id/actionbar_title').text).to eq 'Write Review'
+
+    end
+
+  end
 
 
 end
