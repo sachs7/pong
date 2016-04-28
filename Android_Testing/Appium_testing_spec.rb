@@ -40,6 +40,16 @@ describe 'testing' do
         p error.message
       end
     end
+    
+    it 'Click Review and verify text', verify_review: true do
+      begin
+        find_element(:class, 'android.widget.ImageButton').click
+        find_element(:name, 'Add Review').click
+        expect(find_element(:class, 'android.widget.TextView').text).to eq 'Add Review'
+      rescue Exception => error
+        p error.message
+      end
+    end
 
   end
 
