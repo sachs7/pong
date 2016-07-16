@@ -1,5 +1,6 @@
 # Write a function that takes an input string and returns the first non-repeated char in the string. 
 # For e.g. if the string is "communication", the function should return 'u'. 
+
 def non_repeated(a):
     maps = {}
     a = str(a)
@@ -16,7 +17,8 @@ def non_repeated(a):
       return a[min(result)]
     else:
       return None
- 
+	  
+	  
 print(non_repeated("communication"))  
 print(non_repeated("sachin"))  
 print(non_repeated("aabbccdd")) 
@@ -24,9 +26,3 @@ print(non_repeated(123))
 print(non_repeated("aabbccddeeffgghhijjkkllmmnn"))
 print(non_repeated(""))
 print(non_repeated("  "))
-'''
-str = ' '
- 
-str = 12345
-
-sstr = '''
