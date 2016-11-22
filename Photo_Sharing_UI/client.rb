@@ -403,7 +403,7 @@ class RubyApp < Gtk::Window
 		@ftps.passive = true
 		@ftps.ssl_context = DoubleBagFTPS.create_ssl_context(:verify_mode => OpenSSL::SSL::VERIFY_NONE)
 		@ftps.connect('ftp.ignite-now.us')
-		@ftps.login('sachinu89@ignite-now.us', 'Wonderstuck8')
+		@ftps.login(<Your email/user ID>, <Your Password>)
 		@ftps.chdir('/test/')
 		puts "-------------------------folder Contents of /test/------------------------------"
 		@testing = @ftps.nlst	
