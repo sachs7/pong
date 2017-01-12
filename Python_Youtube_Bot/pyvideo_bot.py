@@ -1,6 +1,6 @@
 import requests
 import bs4
-from multiprocessing import Pool
+from multiprocessing.pool import ThreadPool as Pool
 
 
 def get_url(url):
