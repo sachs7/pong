@@ -59,7 +59,7 @@ final_stats = []
 with Pool(5) as p:
     final_stats += p.map(visit_youtube_with, keys)
 
-print("Total # of videos: ", str(len(final_stats)))
+print("Total number of videos: ", str(len(final_stats)))
 
 for record in final_stats:
     print(record)
@@ -68,7 +68,7 @@ for record in final_stats:
 
 Sample Output:
 
-Total # of videos:  56
+Total number of videos:  56
 {'https://www.youtube.com/watch?v=dWNxplKYu4M': ['Deep learning techniques for predictive analytics using Python: Theano vs TensorFlow (Allaa Hilal)', '276 views']}
 {'https://www.youtube.com/watch?v=JzAjjo_E6iY': ['Managing large ensembles and batch execution with Python (Andre R. Erler)', '64 views']}
 {'https://www.youtube.com/watch?v=UKxIswJSlIY': ['Welcome & Morning Keynote (Tracy Osborn)', '297 views']}
