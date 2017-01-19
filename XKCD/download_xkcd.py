@@ -37,3 +37,7 @@ def main():
 
 
 main()
+
+Sample Output: 
+
+- Downloading http://imgs.xkcd.com/comics/voice_commands.png
