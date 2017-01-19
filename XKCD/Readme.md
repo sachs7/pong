@@ -7,3 +7,4 @@ _To Do_
 Scripts to:
 - email
 - cron job (to send an email everyday!)
+- Few minor changes 
