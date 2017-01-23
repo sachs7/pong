@@ -5,10 +5,10 @@ from email.mime.multipart import MIMEMultipart
 from download_xkcd import new_comic_number
 
 email_from = <EMAIL address from which you want to send>
-recipients = <LIST of recipients EMAIL address>
+recipients = [list of comma seperated EMAIL addresses]
 file_to_send = new_comic_number() + '.png'
 username = email_from
-password = ''
+password = <PASSWORD>
 
 msg = MIMEMultipart()
 msg['From'] = email_from
