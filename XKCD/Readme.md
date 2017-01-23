@@ -17,6 +17,6 @@
   ```
 
 
-_Note:_ If you are using Gmail to send email then you will need to allow **less secure** apps to access gmail! The first time you try to access gmail using Python, your access will not be granted and you will receive an email from Google saying, **Review blocked sign-in attempt**, click _allowing access to less secure apps_ link and select **Turn on** option and there you go, you can access your gmail using Python!
+_Note:_ If you are using Gmail to send email then you will need to allow **less secure** apps to access gmail! The first time you try to access gmail using Python, your access will not be granted and you will receive an email from Google saying, **Review blocked sign-in attempt**, click **_allowing access to less secure apps_** link and select **Turn on** option and there you go, you can access your gmail using Python!
 
 
